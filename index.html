@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<title>Web Inception</title>
+		<main>
+			<h2>Style Tag of this page</h2>
+			<p>You can change its contents!</p>
+
+			<pre>
+<style contenteditable="true" class="visible">
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+title {
+    display: block;
+    text-align: center;
+    color: hotpink;
+    font-size: 3rem;
+    margin-block: 2rem;
+}
+
+main {
+    width: min(95vw, 40rem);
+    margin-inline: auto;
+}
+
+h2 {
+    margin-block: 2rem 0.5rem;
+}
+
+style,
+script {
+    padding: 1rem;
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+style.visible, script {
+    display: block;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+style {
+    background-color: #0a3916;
+    cursor: text;
+    transition: scale 120ms ease;
+}
+
+script {
+    background-color: #560e0e;
+}
+
+style:hover, script:hover {
+    filter: brightness(1.1);
+}
+
+button {
+    font-family: inherit;
+    color: white;
+    font-size: inherit;
+    background-color: royalblue;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+</style>
+            </pre>
+
+			<button id="toggle_btn">Toggle Style Tag</button>
+
+			<h2>Script Tag of this page</h2>
+
+			<pre>            
+<script contenteditable="true">
+for (let i = 0; i < 10; i++) {
+    console.info(i)
+}
+
+const toggle_btn = document.getElementById("toggle_btn");
+const style_element = document.querySelector("style");
+
+toggle_btn.addEventListener("click", () => {
+    style_element.classList.toggle("visible")
+})
+</script>
+
+            </pre>
+		</main>
+	</body>
+</html>
